@@ -1,3 +1,42 @@
+# Requirement Report for Ghost
+
+
+### [Final Assurance claims](https://www.lucidchart.com/invitations/accept/0a976aa4-6349-48fc-8ed8-dc3c684c11d4)
+* 	Ghost Login module successfully averts session hijacking.
+* 	Ghost Login Module has no exploitable SQL_injection weaknesses.
+* 	The Ghost User Story Module has mitigated all privilege escalations.
+* 	Ghost code injection module has no exploitable XSS Weaknesses.
+* 	Ghost system has no API Authentication weaknesses.
+
+### Security Requirements
+
+[Project misuse cases available here](https://www.lucidchart.com/invitations/accept/12f66949-a4b7-4950-84f2-78229cdff59d)
+
+#### Privilege Escalation
+* The system should enforce access control list for to handle privilege roles in the application.
+* Implement data sanitization to avoid injection of malicious scripts in the data fields in the system.
+
+
+#### User Authentication
+* The system should use a pseudorandom number generator to create session ID of higher entropy.
+* The system should use https to encrypt all traffic end to end during session management.
+* The system should use captcha for user authentication to prevent unwanted access to ghost admin.
+* The system should enforce a security question, when the user performs critical tasks related to the database.
+* The system should use cookie based authentication for users. 
+
+
+#### API
+* The system should make sure that the API calls are authenticated with secret key.
+* The system should ensure that the requests made to the API are restricted to select list of IP addresses.
+* The system should ensure limited restriction to API from third party application which use GHOST.
+
+
+#### Script Injection
+* The system should have protection against user and password enumeration attack.
+* The system should implement generic error messages to avoid exposing system sensitive data.
+* The system should prevent session hijacking through XSS attacks on the cookies.
+* Implement data sanitization to prevent script injection in input fields of the system.
+
 ### Security Requirements specified in Ghost Documentation
 
 Ghost advertises itself as a Platform as a service for hosting a blog. Some of the features advertised under PaaS (Platform as a Service) are ensuring data security, role privilege access. Also, Ghost advertises of providing SSL by default and isolated applications, firewalls and spam protection. Ghost is built on Restful JSON API, and the data access is handled by the API. Since Ghost uses RESTFUL principles, SSL plays a vital role in securing the data access over the resource oriented URL’s. The URL’s are easily guessable.
@@ -10,4 +49,5 @@ By analyzing from the above features provided from Ghost, we can say that it han
 
 The documentation indirectly talks about Privilege escalation in the API documentation. How different roles access are handled by the API. However, it just lists the user role capabilities and their access. We feel that the documentation should have covered how the privilege escalation is handled by the system and explain it directly in terms of the roles assigned in the system.
 Further when we consider security concerns related to Script injections, the documentation fails to mention of requirements related script injections. This makes us ask the question if at all script injection is handled by the Ghost system.
+
 
