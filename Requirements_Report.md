@@ -25,7 +25,7 @@
 * The system should use cookie based authentication for users. 
 
 
-#### API
+#### API Authentication
 * The system should make sure that the API calls are authenticated with secret key.
 * The system should ensure that the requests made to the API are restricted to select list of IP addresses.
 * The system should ensure limited restriction to API from third party application which use GHOST.
