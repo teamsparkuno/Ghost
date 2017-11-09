@@ -15,7 +15,7 @@ The  common threats identified from our threat model are focused between the tru
 
 **Elevation of privileges** : User Impersonation to gain admin privileges.
 
-For detailed description of the threats identified and for the mitigations provided for each of them please refer to our [HTML report]() generated using Microsoft threat modeling tool 2016. 
+For detailed description of the threats identified and for the mitigations provided for each of them please refer to our [HTML report](https://github.com/teamsparkuno/Ghost/blob/master/Ghost%20threat%20report.pdf) generated using Microsoft threat modeling tool 2016. 
 
 After going through the design of Ghost , we have found that it mitigates most of the threats identified from the threat model.
 
